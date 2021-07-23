@@ -97,8 +97,8 @@ public class EstudoCollectionsJavaApplication {
 
 		System.out.println("--\tOrdem Nome/Gênero/TempoEpisodio\t--");
 		Set<Serie> minhasSeries3 = new TreeSet<>(new ComparatoNomeGeneroTempoEpisodio());
-
-		for (Serie serie: minhasSeries2) System.out.println(serie.getNome() + "-"
+		minhasSeries3.addAll(minhasSeries1);
+		for (Serie serie: minhasSeries3) System.out.println(serie.getNome() + "-"
 				+ serie.getGenero() + "-" + serie.getTempoEpisodio());
 
 
@@ -356,7 +356,7 @@ class Serie implements Comparable<Serie>{
 	}
 
 }
-
+class ComparatoNomeGeneroTempoEpisodio implements Comparator<Serie> {
 	@Override
 	public int compare(Serie s1, Serie s2) {
 		int nome = s1.getNome().compareTo(s2.getNome());
@@ -369,5 +369,5 @@ class Serie implements Comparable<Serie>{
 
 	}
 
-
+}
 

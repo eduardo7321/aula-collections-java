@@ -13,105 +13,144 @@ public class EstudoCollectionsJavaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EstudoCollectionsJavaApplication.class, args);
 
-
-		System.out.println("Crie uma lista e adicione as sete notas: ");
-		Set<Double> notas = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
-		System.out.println(notas.toString());
-
-//		System.out.println("Exiba a posição da nota 5.0: " + notas.indexOf(5d));
+		//ESTUDO DO SET
+//		System.out.println("Crie uma lista e adicione as sete notas: ");
+//		Set<Double> notas = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
+//		System.out.println(notas.toString());
 //
-//		System.out.println("Adicione na lista a nota 8.0 na posição 4: " + notas.indexOf(5d));
+////		System.out.println("Exiba a posição da nota 5.0: " + notas.indexOf(5d));
+////
+////		System.out.println("Adicione na lista a nota 8.0 na posição 4: " + notas.indexOf(5d));
+////
+////		System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
+////
+//		System.out.println("Confira se a nota 5.0 está na lista: " + notas.contains(5d));
+////
+////		System.out.println("Exiba todas as notas na ordem que foram informadas: ");
+////
+////		System.out.println("Exiba terceira nota que foi informada: " + notas.get(2));
+////
+//		System.out.println("Exiba a menor nota: " + Collections.min(notas));
+////
+//		System.out.println("Exiba a maior nota: " + Collections.max(notas));
+////
+//		Iterator<Double> iterator = notas.iterator();
+//		Double soma = 0.0;
+//		while (iterator.hasNext()) {
+//			Double next = iterator.next();
+//			soma+= next;
+//		}
+//		System.out.println("Exiba a soma dos valores: " + soma);
 //
-//		System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
-//
-		System.out.println("Confira se a nota 5.0 está na lista: " + notas.contains(5d));
+////
+//		System.out.println("Exiba a média das notas: " + soma/ notas.size());
+////
+//		System.out.println("Remova a nota 0: ");
+//		notas.remove(0d);
+//		System.out.println(notas);
+////
+////		System.out.println("Remova a primeira nota: ");
+////
+//		System.out.println("Remova as notas menores que 7: ");
+//		Iterator<Double> iterator1 = notas.iterator();
+//		while (iterator.hasNext()){
+//			Double next = iterator.next();
+//			if (next < 7) iterator.remove();;
+//		}
+//		System.out.println(notas);
 //
 //		System.out.println("Exiba todas as notas na ordem que foram informadas: ");
+//		Set<Double> notas2 = new LinkedHashSet<>();
+//		notas2.add(7d);
+//		notas2.add(8.5);
+//		notas2.add(9.3);
+//		notas2.add(5d);
+//		notas2.add(7d);
+//		notas2.add(0d);
+//		notas2.add(3.6);
+//		System.out.println(notas2);
+////
+//		System.out.println("Exiba todas as notas naordem crescente: ");
+//		Set<Double> notas3 = new TreeSet<>(notas2);
+//		System.out.println(notas3);
 //
-//		System.out.println("Exiba terceira nota que foi informada: " + notas.get(2));
+//		System.out.println("Apague todo o conjunto:");
+//		notas.clear();
 //
-		System.out.println("Exiba a menor nota: " + Collections.min(notas));
+//		System.out.println("Confira se o conjunto está vazio: " + notas.isEmpty());
+//		System.out.println("Confira se o conjunto 2 está vazio: " + notas2.isEmpty());
 //
-		System.out.println("Exiba a maior nota: " + Collections.max(notas));
 //
-		Iterator<Double> iterator = notas.iterator();
-		Double soma = 0.0;
-		while (iterator.hasNext()) {
-			Double next = iterator.next();
-			soma+= next;
-		}
-		System.out.println("Exiba a soma dos valores: " + soma);
-
+//		System.out.println("--\tOrdem aleatória\t--");
+//		Set<Serie> minhasSeries1 = new LinkedHashSet<>(){{
+//			add(new Serie("got", "fantasia", 60));
+//			add(new Serie("dark", "drama", 60));
+//			add(new Serie("that '70s show", "comédia", 25));
+//		}};
+//		for (Serie serie: minhasSeries1) System.out.println(serie.getNome() + " - "
+//			+ serie.getGenero() + " - " + serie.getTempoEpisodio());
 //
-		System.out.println("Exiba a média das notas: " + soma/ notas.size());
+//		System.out.println("--\tOrdem natural (TempoEpisodio\t--");
+//		Set<Serie> minhasSeries2 = new TreeSet<>(minhasSeries1);
+//		for (Serie serie: minhasSeries2) System.out.println(serie.getNome() + "-"
+//				+ serie.getGenero() + "-" + serie.getTempoEpisodio());
 //
-		System.out.println("Remova a nota 0: ");
-		notas.remove(0d);
-		System.out.println(notas);
-//
-//		System.out.println("Remova a primeira nota: ");
-//
-		System.out.println("Remova as notas menores que 7: ");
-		Iterator<Double> iterator1 = notas.iterator();
-		while (iterator.hasNext()){
-			Double next = iterator.next();
-			if (next < 7) iterator.remove();;
-		}
-		System.out.println(notas);
-
-		System.out.println("Exiba todas as notas na ordem que foram informadas: ");
-		Set<Double> notas2 = new LinkedHashSet<>();
-		notas2.add(7d);
-		notas2.add(8.5);
-		notas2.add(9.3);
-		notas2.add(5d);
-		notas2.add(7d);
-		notas2.add(0d);
-		notas2.add(3.6);
-		System.out.println(notas2);
-//
-		System.out.println("Exiba todas as notas naordem crescente: ");
-		Set<Double> notas3 = new TreeSet<>(notas2);
-		System.out.println(notas3);
-
-		System.out.println("Apague todo o conjunto:");
-		notas.clear();
-
-		System.out.println("Confira se o conjunto está vazio: " + notas.isEmpty());
-		System.out.println("Confira se o conjunto 2 está vazio: " + notas2.isEmpty());
+//		System.out.println("--\tOrdem Nome/Gênero/TempoEpisodio\t--");
+//		Set<Serie> minhasSeries3 = new TreeSet<>(new ComparatoNomeGeneroTempoEpisodio());
+//		minhasSeries3.addAll(minhasSeries1);
+//		for (Serie serie: minhasSeries3) System.out.println(serie.getNome() + "-"
+//				+ serie.getGenero() + "-" + serie.getTempoEpisodio());
 
 
-		System.out.println("--\tOrdem aleatória\t--");
-		Set<Serie> minhasSeries1 = new LinkedHashSet<>(){{
-			add(new Serie("got", "fantasia", 60));
-			add(new Serie("dark", "drama", 60));
-			add(new Serie("that '70s show", "comédia", 25));
+
+
+
+		//ESTUDO DO MAP
+		System.out.println("Crie um dicionário que relacione os modelos e seus respectivos consumos ");
+		Map<String, Double> carrosPopulares = new HashMap<>(){{
+			put("gol", 14.4);
+			put("uno", 15.6);
+			put("mobi", 16.1);
+			put("hb20", 14.5);
+			put("kuid", 15.6);
 		}};
-		for (Serie serie: minhasSeries1) System.out.println(serie.getNome() + " - "
-			+ serie.getGenero() + " - " + serie.getTempoEpisodio());
+		System.out.println(carrosPopulares.toString());
 
-		System.out.println("--\tOrdem natural (TempoEpisodio\t--");
-		Set<Serie> minhasSeries2 = new TreeSet<>(minhasSeries1);
-		for (Serie serie: minhasSeries2) System.out.println(serie.getNome() + "-"
-				+ serie.getGenero() + "-" + serie.getTempoEpisodio());
+		System.out.println("Substitua o consumo do gol por 15,2 km/l: ");
+		carrosPopulares.put("gol", 16.1);
+		System.out.println(carrosPopulares);
 
-		System.out.println("--\tOrdem Nome/Gênero/TempoEpisodio\t--");
-		Set<Serie> minhasSeries3 = new TreeSet<>(new ComparatoNomeGeneroTempoEpisodio());
-		minhasSeries3.addAll(minhasSeries1);
-		for (Serie serie: minhasSeries3) System.out.println(serie.getNome() + "-"
-				+ serie.getGenero() + "-" + serie.getTempoEpisodio());
+		System.out.println("Confira se o tucson está no dicionário: " + carrosPopulares.containsKey("tuscon"));
+
+		System.out.println("Exiba o consumo do uno: " + carrosPopulares.get("uno"));
+
+		//System.out.println("Exiba o terceiro modelo adicionado: ");
+
+		System.out.println("exiba os modelos: ");
+		Set<String> modelos =	carrosPopulares.keySet();
+		System.out.println(modelos);
+
+		System.out.println("Exiba os consumos dos carros: ");
+		Collection<Double> consumos = carrosPopulares.values();
+		System.out.println(consumos);
+
+		System.out.println("Exiba o modelo mais economico e seu consumo: ");
+
+		Double consumoMaisEficiente = Collections.max(carrosPopulares.values());
+		Set<Map.Entry<String, Double>> entries = carrosPopulares.entrySet();
+		String modeloMaisEficiente = "";
+
+		for (Map.Entry<String, Double> entry: entries) {
+			if (entry.getValue().equals(consumoMaisEficiente)) {
+				modeloMaisEficiente = entry.getKey();
+				System.out.println("Modelo mais eficiente: " + modeloMaisEficiente + "-" + consumoMaisEficiente);
+			}
+		}
 
 
-		
 
 
-
-
-
-
-
-
-	//		ORDENACAO HAS
+		//		ORDENACAO HAS
 //		System.out.println("Confira se a l//		ista está vazia: " + notas.isEmpty());
 	//
 
